@@ -1,0 +1,29 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Meu site",
+  "main": "index.js",
+  "dependencies": {
+    "angular-ui-router": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "directory": "^0.1.0",
+    "express": "^4.15.4",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pfelipe96/MyWebSite.git"
+  },
+  "author": "Paulo Felipe O Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pfelipe96/MyWebSite/issues"
+  },
+  "homepage": "https://github.com/pfelipe96/MyWebSite#readme"
+}
