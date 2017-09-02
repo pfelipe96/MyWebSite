@@ -1,0 +1,154 @@
+<section>
+
+  <!-- Rede Sociais, botão flotuante Fixo-->
+  <div class="fixed-action-btn click-to-toggle">
+    <a class="btn-floating btn-large green">
+      <i class="fa fa-share-alt-square" aria-hidden="true"></i>
+    </a>
+    <ul>
+      <li><a target="_blank" href="https://github.com/pfelipe96" class="btn-floating grey"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+      <li><a target="_blank" href="https://www.linkedin.com/in/paulo-felipe-souza-72ba5ab4/" class="btn-floating blue"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper black">
+          <a ng-click="goToElement('home')" class="brand-logo black-text"><img src="imagens/logoPF.png"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a ng-click="goToElement('sobre')">Sobre</a></li>
+            <li><a ng-click="goToElement('portfolio')">Portfólio</a></li>
+            <li><a ng-click="goToElement('contato')">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home">
+    <div>
+      <div class="img-laptop">
+        <img class="responsive-img" src="imagens/laptop-png-6754.png">
+      </div>
+      <div class="video-laptop">
+        <video playsinline autoplay muted loop>
+          <source src="video/Matrix.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mim -->
+  <section id="sobre">
+    <div class="row">
+      <div class="col s12">
+        <div class="col m4 s12">
+          <img class="circle" src="imagens/my.jpg">
+        </div>
+        <div class="col m8 s12">
+          <div id="content-sobre">
+            <h3 class="center">Sobre mim</h3>
+            <p>
+              Meu nome é Paulo Felipe, tenho 21 anos, nasci e moro em São Paulo.
+              Estou cursando Engenharia da Computação pela Universidade Anhembi Morumbi, fazia Economia pela FECAP, porém percebir
+              que não era minha paixão.
+              Já fiz cursos correlacionados a minha área, tais como: Desenvolvimento Mobile em Android Nativo e Full Stacker.
+              Desenvolvo em Node.JS, Argular 1, JavaScript, Java, Android, MongoDB, C, Arduino, HTML5, CCS3, Materialize e Bootstrap.
+              Meus objetivos são desenvolver minhas habilidades e contribuir cada vez mais para o desenvolvimento tecnológico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Meu Portfolio  -->
+  <section id="portfolio">
+    <div id="content-sobre" class="card-content">
+      <h3 class="center">Portfólio</h3>
+        <div class="carousel">
+          <a class="carousel-item"><img src="https://lorempixel.com/250/250/nature/1"></a>
+          <a class="carousel-item"><img src="https://lorempixel.com/250/250/nature/2"></a>
+          <a class="carousel-item"><img src="https://lorempixel.com/250/250/nature/3"></a>
+          <a class="carousel-item"><img src="https://lorempixel.com/250/250/nature/4"></a>
+          <a class="carousel-item"><img src="https://lorempixel.com/250/250/nature/5"></a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Meu Contato -->
+  <section id="contato">
+    <div>
+
+      <div class="row">
+        <div class="col s12">
+          <div class="card col m8 offset-m2">
+            <div class="card-content col s12">
+              <div class="col offset-s2 offset-m4 offset-l2 l4 m12 s12" id="contato-content">
+                <a href="tel:11983279599" class="fa fa-whatsapp black-text"></a>
+                <p><a href="tel:11983279599" class="black-text">(11) 98327-9599</a></p>
+              </div>
+              <div class="col offset-s2 offset-m4 offset-l1 l4 m12 s12" id="contato-content">
+                <a href="p.felipe@msn.com" class="fa fa-envelope black-text"></a>
+                <p><a href="mailto:p.felipe@msn.com" class="black-text">p.felipe@msn.com</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="card-title black-text center font-assunt">Mande uma mensagem para mim, terei o prazer em respondê-lo</p><br>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col xl6 m12 s12">
+                <input ng-model="dados.primeiro_nome" id="first_name" type="text" class="validate black-text">
+                <label for="first_name">Primeiro Nome</label>
+              </div>
+              <div class="input-field col xl6 m12 s12">
+                <input ng-model="dados.ultimo_nome" id="last_name" type="text" class="validate black-text">
+                <label for="last_name">Último nome</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="dados.telefone" id="tel" type="tel" class="validate black-text">
+                <label for="tel">Telefone</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input ng-model="dados.email" id="email" type="email" class="validate black-text">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea ng-model="dados.assunto" id="matter" class="materialize-textarea black-text"></textarea>
+                    <label for="matter">Assunto da Mensagem</label>
+                  </div>
+                </div>
+              </form>
+              <div class="button">
+                <button ng-click="enviar()" class="btn button-active grey">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    $(document).ready(function(){
+       $('.carousel').carousel();
+     });
+  </script>
+
+</section>

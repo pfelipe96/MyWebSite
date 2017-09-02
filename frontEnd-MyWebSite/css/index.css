@@ -1,35 +1,134 @@
-#icon-footer ul li a i{
-  font-size: 4rem;
+body{
+  font-family: 'Shadows Into Light', cursive;
 }
 
-#icon-footer ul li{
-  margin: 0.5rem;
+/*Header*/
+header img{
+  margin: 0.9rem auto auto 1rem;
 }
 
-#icon-footer{
-  margin-top: 2.8rem;
+header ul{
+  margin: auto 1rem auto auto;
 }
 
-.brand-logo{
-  margin-left: 2rem;
+header nav li a{
+  color: #76ff03 ;
+  font-size: 1.5rem;
 }
 
-.nav-wrapper ul{
-  margin-right: 2rem;
+header nav li a:hover{
+
 }
-#icon-footer-contact a{
-   color: #000;
+/*Home*/
+#home{
+  background-color:#000;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
-#index-content p{
-  margin: 0.2rem;
+.img-laptop{
+  position: relative;
 }
 
-#index-content a{
+video{
+  max-width: 100%;
+  height: auto;
+}
+
+.video-laptop{
+  width:28.0%;
+  height: auto;
+  margin-left: 36.1%;
+  margin-top: -29.5%;
+  position: absolute;
+}
+
+.button button{
+  margin-left: 0.9rem;
+}
+
+
+/*Sobre*/
+#sobre{
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background-image: url("../imagens/front-end-developer.jpg");
+  background-size: 100% 100%;
+}
+
+#sobre img{
+  margin: 10% auto auto 10%;
+  width: 85%;
+  height: auto;
+  border-radius: 2
+}
+
+#content-sobre p{
+  text-align: justify;
+  font-size: 2rem;
+}
+
+#content-sobre h3{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 6rem;
+}
+/*Portfolio*/
+#portfolio{
+  background-color: #000;
+}
+
+#portfolio div{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+#portfolio h3{
+  color: #76ff03 ;
+}
+
+/*Contatos*/
+#contato{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#contato-content a{
   margin-right: 0.5rem;
+  font-size: 1.5rem;
 }
 
-#index-content{
+#contato-content{
   display: flex;
-  margin-top: 1rem;
+}
+
+#contato label{
+  font-size: 1.5rem;
+}
+
+.font-assunt{
+  font-size: 1.5rem;
+}
+
+.fa{
+  font-size: 2.5rem;
+}
+
+/*Footer*/
+footer div{
+  font-size: 1.5rem;
+}
+
+/*Mobile*/
+@media screen and (max-width: 450px) {
+
+  #content-sobre p{
+    font-size: 1rem;
+  }
+  .video-laptop{
+    width:28.0%;
+    height: auto;
+    margin-left: 36.1%;
+    margin-top: -30.4%;
+    position: absolute;
+  }
 }

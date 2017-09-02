@@ -1,8 +1,9 @@
-var express = require('express'),
-    url = require('url');
-    path = require('path'),
-    bodyParser = require('body-parser'),
-    app = express();
+var   express = require('express'),
+      url = require('url'),
+      path = require('path'),
+      bodyParser = require('body-parser'),
+      favicon = require('express-favicon'),
+      app = express();
 
 // Liberar acesso aos broswer
 app.use(function (req, res, next) {
@@ -17,6 +18,9 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({extended: true}));
+
+// Ferramenta utilizada para colocar o Favicon
+app.use(favicon(__dirname + '/frontEnd-MyWebSite/imagens/computerFavicon.png'));
 
 // Ferramenta utilizada para trajetória de arquivo
 app.use(express.static(path.join(__dirname, '/frontEnd-MyWebSite')));
@@ -34,6 +38,7 @@ app.get('/*', function (req, res) {
 
 // Chamar o servidor
 app.set('port', process.env.PORT || 8080);
+
 var server = app.listen(app.get('port'), function() {
 
 });

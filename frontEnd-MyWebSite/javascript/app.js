@@ -1,8 +1,7 @@
-var app = angular.module('starter',['ngRoute', 'starter.controllers']);
+var app = angular.module('starter',['ngRoute', 'starter.controllers', 'starter.services']);
 
 app.config(function($routeProvider, $locationProvider)
 {
-
 
     // remove o # da url
     $locationProvider.html5Mode({
@@ -14,7 +13,7 @@ app.config(function($routeProvider, $locationProvider)
    // para a rota '/', carregaremos o template home.html e o controller 'HomeCtrl'
    .when('/', {
       templateUrl : 'views/page.html',
-      controller  : 'pageController',
+      controller  : 'PageController',
    })
 
    // caso não seja nenhum desses, redirecione para a rota '/'

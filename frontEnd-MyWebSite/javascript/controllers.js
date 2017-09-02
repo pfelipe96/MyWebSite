@@ -1,17 +1,18 @@
 angular.module('starter.controllers', [])
 
-.controller('HomeController', function($rootScope, $location) {
-    $rootScope.activetab = $location.path();
-})
+.controller('PageController', function($location, $scope, Scroll) {
 
-.controller('SobreController', function($rootScope, $location) {
-    $rootScope.activetab = $location.path();
-})
+  $scope.dados = {};
 
-.controller('PromocaoController', function($rootScope, $location) {
-    $rootScope.activetab = $location.path();
-})
+  $scope.enviar = function() {
+    console.log($scope.dados);
+  }
 
-.controller('ContatosController', function($rootScope, $location) {
-    $rootScope.activetab = $location.path();
+  $scope.goToElement = function(eID){
+      var hereID = eID;
+
+      $location.hash(hereID);
+
+      Scroll.scrollTo(hereID);
+  };
 })
